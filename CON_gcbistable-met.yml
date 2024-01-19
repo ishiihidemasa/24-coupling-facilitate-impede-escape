@@ -1,4 +1,4 @@
-name: ishii-CON_gcbistable-met
+name: CON_gcbistable-met
 channels:
   - defaults
   - conda-forge
@@ -105,4 +105,3 @@ dependencies:
     - sip==6.7.12
     - tornado==6.3.3
     - wheel==0.41.2
-prefix: /home/ishii/.conda/envs/ishii-CON_gcbistable-met
