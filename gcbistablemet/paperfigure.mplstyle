@@ -1,0 +1,10 @@
+axes.formatter.limits: -3, 4
+axes.xmargin: 0.03
+figure.constrained_layout.use: True
+figure.dpi: 200
+figure.figsize: 7, 2.4
+figure.frameon: False
+legend.handlelength: 2
+legend.handletextpad: 0.4
+lines.linewidth: 2
+savefig.bbox: tight

@@ -1,0 +1,50 @@
+{
+	// A name for the dev container displayed in the UI
+	"name": "${localWorkspaceFolderBasename}",
+
+	"build": {
+		// Path of the Dockerfile relative to devcontainer.json
+		"dockerfile": "Dockerfile"
+	},
+
+	// Upon starting, let me know if there is any outdated package.
+	//"postStartCommand": "python -m pip list --outdated",
+
+	"customizations": {
+		// following extensions are installed within container
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.isort",
+				"ms-toolsai.jupyter",
+				"ms-python.black-formatter",
+			]
+		}
+	},
+
+	"settings": {
+		// enable linting using pylint
+		"python.linting.enabled": true,
+		"python.linting.lintOnSave": true,
+		
+		// Pylance
+		"python.languageServer": "Pylance",
+		// enable auto completion for functions
+		"python.analysis.completeFunctionParens": true,
+
+		// settings for black
+		"python.formatting.provider": "black",
+		"python.formatting.blackArgs": [
+			"--line-length=79"  // 79 or 120?
+		],
+
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter",
+			"editor.codeActionsOnSave": {
+				// run isort upon saving a file
+				"source.organizeImports": true
+			},
+			"editor.formatOnSave": true
+		}
+	}
+}
